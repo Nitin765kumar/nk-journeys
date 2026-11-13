@@ -19,6 +19,8 @@ nk-journeys/
 ├── contact.html          Enquiry form
 ├── privacy.html  terms.html  cancellation.html  payment-policy.html
 ├── 404.html
+├── sitemap.xml           Page list for Google Search Console
+├── favicon.svg           Tab icon
 ├── css/nkj.css           All styles
 ├── js/
 │   ├── data.js           Destinations and packages (edit prices and trips here)
