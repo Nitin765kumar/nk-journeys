@@ -1,100 +1,53 @@
-# 🌏 IndiaTours – Tourism Booking Website
+# NK Journeys
 
-IndiaTours is a responsive tourism booking website that allows users to explore popular destinations across India and book travel packages through a simple and interactive interface.
+A static travel website (HTML, CSS and JavaScript) built as a learning and portfolio project.
+Bookings and payments are simulated in the browser. No real money or personal data is processed.
 
-This project was developed as part of my learning journey in **web development** and focuses on creating a complete travel booking flow including destinations, packages, booking form, payment interface, and booking confirmation.
+## Folder structure
 
----
+```
+nk-journeys/
+├── index.html            Home
+├── destinations.html     Destinations with search and style filters
+├── packages.html         Packages with search, filters and sorting
+├── package.html          Package detail (?id=kerala-6d)
+├── booking.html          Traveller details, coupon, pay in full or 30%
+├── payment.html          Demo payment: UPI, card, net banking, wallet
+├── confirmation.html     Booking voucher (printable)
+├── about.html            About us, process, team
+├── support.html          Booking guide, checklist, FAQs, booking tracker
+├── contact.html          Enquiry form
+├── privacy.html  terms.html  cancellation.html  payment-policy.html
+├── 404.html
+├── css/nkj.css           All styles
+├── js/
+│   ├── data.js           Destinations and packages (edit prices and trips here)
+│   ├── utils.js          Helpers, cards, price calculation
+│   ├── layout.js         Shared header, navigation and footer
+│   └── pages.js          Logic for each page
+└── img/                  Compressed photos
+```
 
-## 🚀 Live Demo
+## Demo test values
 
-You can visit the live website here:
+| Item | Value |
+| --- | --- |
+| Coupon | `NKJ10` (10% off trip fare) |
+| Card that succeeds | `4111 1111 1111 1111`, any future expiry, any 3-digit CVV |
+| Card that fails | `4000 0000 0000 0002` |
+| UPI that fails | `fail@upi` (any other `name@bank` succeeds) |
 
-🔗 **Live Website:**  
-https://nitin765kumar.github.io/India-tour---travels/
+## Run locally
 
-> After hosting the website, add the deployed link here.
+Open `index.html` in a browser, or run `python3 -m http.server` in this folder.
 
----
+## Deploy on GitHub Pages
 
-## 🎥 Project Demo
+1. Copy everything in this folder to the root of your repository.
+2. Commit and push.
+3. In the repository, open Settings, then Pages, and choose the main branch and the root folder.
 
-A complete walkthrough of the website including booking and payment workflow is available on my LinkedIn profile.
+## Add a package
 
----
-
-## ✨ Features
-
-- Modern and responsive UI
-- Explore popular travel destinations
-- Travel packages listing
-- Online trip booking form
-- Dynamic booking summary
-- Demo payment gateway interface
-- Booking confirmation system with booking ID
-- Founder and team section
-- Mobile friendly design
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **Bootstrap 5**
-- **JavaScript**
-- **Font Awesome Icons**
-
----
-
-## 📂 Project Structure
-
-IndiaTours
-│
-├── index.html
-├── destinations.html
-├── packages.html
-├── about.html
-├── contact.html
-├── booking.html
-├── payment.html
-├── confirmation.html
-│
-├── css
-│ └── style.css
-│
-├── js
-│ └── script.js
-│
-├── images
-│
-└── README.md
-
-
----
-
-## 📌 Future Improvements
-
-- Real payment gateway integration
-- Backend booking system
-- Email confirmation after booking
-- Admin dashboard for managing bookings
-
----
-
-## 👨‍💻 Author
-
-**Nitin Kumar**
-
-BCA Student | Web Development Learner
-
-🔗 GitHub:  
-https://github.com/Nitin765kumar
-
-🔗 LinkedIn:  
-https://www.linkedin.com/in/nitinkumar25
-
----
-
-⭐ If you like this project, consider giving it a star on GitHub!
-
+Add one object to `PACKAGES` in `js/data.js` (id, name, dest, days, nights, price, cats, img, itinerary).
+Every page reads from that list, so the price stays the same everywhere.

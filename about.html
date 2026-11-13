@@ -1,373 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story & Mission | IndiaTours</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --navy-dark: #0a192f;
-            --navy-slate: #112240;
-            --navy-light: #233554;
-            --orange-primary: #ff4d00;
-            --text-slate: #8892b0;
-            --light-slate: #ccd6f6;
-        }
-
-        body { font-family: 'Poppins', sans-serif; background-color: var(--navy-dark); color: var(--light-slate); line-height: 1.9; overflow-x: hidden; }
-        .text-orange { color: var(--orange-primary) !important; }
-        
-        /* Professional Navbar */
-        .navbar {
-            background: rgba(10, 25, 47, 0.95);
-            backdrop-filter: blur(12px);
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .nav-link { 
-            color: var(--light-slate) !important; 
-            font-size: 0.85rem; 
-            font-weight: 500;
-            margin: 0 12px !important; 
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s; 
-        }
-        .nav-link:hover, .nav-link.active { color: var(--orange-primary) !important; }
-
-        /* Grand Header - Increased Size */
-        .sub-hero {
-            height: 85vh; /* Increased from 70vh */
-            background: linear-gradient(to bottom, rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.98)), 
-                        url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da') center/cover no-repeat;
-            display: flex; align-items: center; justify-content: center; text-align: center;
-        }
-
-        /* Narrative Sections */
-        .story-container { padding: 120px 0; }
-        .section-tag { color: var(--orange-primary); font-weight: 700; letter-spacing: 4px; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 20px; display: block; }
-        .huge-title { font-size: 3.5rem; font-weight: 800; color: white; margin-bottom: 35px; line-height: 1.1; }
-        
-        .narrative-p { font-size: 1.15rem; color: var(--text-slate); margin-bottom: 30px; text-align: justify; }
-        .drop-cap { float: left; font-size: 4.5rem; line-height: 1; font-weight: 800; color: var(--orange-primary); margin-right: 15px; margin-top: 5px; }
-
-        /* Founder Section */
-        .founder-box {
-            background: var(--navy-slate);
-            border-radius: 30px;
-            padding: 60px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        .founder-img { width: 100%; max-width: 350px; border-radius: 20px; border: 5px solid var(--navy-light); transition: 0.5s; }
-
-        /* Footer */
-        footer { background: #040c18; border-top: 1px solid var(--navy-light); padding: 80px 0 30px; }
-        .footer-heading { color: white; font-weight: 700; margin-bottom: 25px; font-size: 1.1rem; }
-        .footer-link { color: var(--text-slate); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 12px; transition: 0.3s; }
-        .footer-link:hover { color: var(--orange-primary); padding-left: 8px; }
-        
-        .social-circle {
-            width: 42px; height: 42px; background: var(--navy-light);
-            display: inline-flex; align-items: center; justify-content: center;
-            border-radius: 50%; color: white; margin-right: 12px; transition: 0.3s;
-        }
-        .social-circle:hover { background: var(--orange-primary); transform: translateY(-5px); }
-
-        .btn-orange { background: var(--orange-primary); color: white; border-radius: 50px; padding: 14px 40px; font-weight: 600; border: none; transition: 0.3s; }
-        .btn-orange:hover { background: white; color: var(--orange-primary); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 77, 0, 0.3); }
-        
-        .reveal { opacity: 0; transform: translateY(50px); transition: 1.2s all ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About us | NK Journeys</title>
+  <meta name="description" content="Who we are, how we plan trips across India, and the people behind NK Journeys.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/nkj.css">
 </head>
+<body data-page="about" data-nav="about.html">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="site-header"></div>
 
-<body>
+  <main id="main">
+    <div class="wrap">
+      <div class="page-h">
+        <h1 style="font-size: clamp(32px, 4vw, 48px)">We plan trips the way we would want ours planned</h1>
+        <p>NK Journeys is a small travel team that builds clear, unhurried trips across India.</p>
+      </div>
+    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-3" href="index.html">INDIA<span class="text-orange">TOURS</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-orange btn-sm" href="booking.html">Book Trip</a>
-                    </li>
-                </ul>
-            </div>
+    <section class="wrap">
+      <div class="split">
+        <div>
+          <h2>Our story</h2>
+          <p>NK Journeys began with a simple frustration. Planning a trip in India usually means comparing a dozen tabs, decoding package lists that never say what is actually included, and hoping the hotel matches the photos.</p>
+          <p>We wanted one place where the plan, the price and the people behind the trip are all clear before you pay. So every package we list follows the same pattern: a day-by-day plan you can read in two minutes, a plain list of what is and is not included, and a price with GST shown upfront.</p>
+          <p>We are a small team, and we like it that way. The people who plan your trip are the people you can call when something changes.</p>
         </div>
-    </nav>
-
-    <!-- Large Header Section -->
-    <header class="sub-hero">
-        <div class="container">
-            <div class="reveal active">
-                <span class="section-tag">Welcome to Bharat</span>
-                <h1 class="huge-title">The Legacy of India. <br>The <span class="text-orange">Future</span> of Travel.</h1>
-                <p class="fs-5 text-white-50 mx-auto" style="max-width: 850px;">A comprehensive gateway designed to answer every question about your Indian odyssey, built with passion and technical precision.</p>
-                <a href="#india-story" class="btn btn-orange mt-4">Begin The Journey</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Detailed India Tourism Story -->
-    <section id="india-story" class="story-container">
-        <div class="container">
-            <div class="row reveal">
-                <div class="col-lg-12">
-                    <span class="section-tag">The Destination</span>
-                    <h2 class="huge-title">India: A <span class="text-orange">Soul-Stirring</span> Reality</h2>
-                    <p class="narrative-p">
-                        <span class="drop-cap">T</span>o understand India is to understand the history of humanity itself. Stretching from the icy summits of the Himalayas to the tropical sun of the Indian Ocean, this nation is a mosaic of experiences that defy simple description. India is home to over 1.4 billion people, 22 major languages, and a spiritual heritage that has influenced every corner of the globe. 
-                    </p>
-                    <p class="narrative-p">
-                        Tourism in India is more than just sightseeing; it is a sensory immersion. In the North, the <b>Golden Triangle</b> offers a glimpse into the Mughal and Rajput eras, where the Taj Mahal stands as a testament to eternal love. In the West, the deserts of <b>Kutch and Jodhpur</b> provide a canvas of vibrant colors against a landscape of golden sands. Moving South, the ancient temples of <b>Tamil Nadu</b> and the tranquil backwaters of <b>Kerala</b> offer a different pace of life, rooted in tradition and natural beauty.
-                    </p>
-                    <p class="narrative-p">
-                        What sets India apart is the concept of <i>"Vasudhaiva Kutumbakam"</i>—the world is one family. This cultural DNA ensures that every traveler is treated not as a customer, but as a guest. Whether you are exploring the bustling tech-hubs of Bengaluru or the silent monasteries of Ladakh, India offers a unique blend of ancient wisdom and modern ambition.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div class="cover"><img src="img/team3.jpg" alt="The NK Journeys team together" loading="lazy"></div>
+      </div>
     </section>
 
-    <!-- Our Philosophy Section -->
-<section class="story-container bg-navy-dark">
-    <div class="container py-5">
-        <div class="row mb-5 reveal">
-            <div class="col-lg-12 text-center">
-                <span class="section-tag">The Foundation</span>
-                <h2 class="huge-title">Our <span class="text-orange">Core Purpose</span></h2>
-                <p class="text-white-50">Going beyond just travel—defining the standard for Indian exploration.</p>
-            </div>
+    <section class="sec">
+      <div class="wrap">
+        <h2 style="margin-bottom: 22px">What we offer today</h2>
+        <div class="facts">
+          <div class="fact"><b>8</b>destinations across the north, south, east and west</div>
+          <div class="fact"><b>8</b>ready-to-book packages with full itineraries</div>
+          <div class="fact"><b>2 to 7</b>days per trip, so there is a fit for a long weekend or a full week</div>
+          <div class="fact"><b>30%</b>advance option, with the balance due a week before travel</div>
         </div>
-        
-        <div class="row g-4">
-            <!-- Our Vision -->
-            <div class="col-md-4 reveal">
-                <div class="founder-box h-100 p-5 text-center">
-                    <div class="mb-4">
-                        <i class="fas fa-eye text-orange fa-3x"></i>
-                    </div>
-                    <h4 class="text-white fw-bold mb-3">Our Vision</h4>
-                    <p class="small text-white-50">To become the world's most trusted digital gateway for authentic Indian experiences, using technology to preserve and promote our cultural heritage for future generations.</p>
-                </div>
-            </div>
-            
-            <!-- Our Mission -->
-            <div class="col-md-4 reveal">
-                <div class="founder-box h-100 p-5 text-center">
-                    <div class="mb-4">
-                        <i class="fas fa-bullseye text-orange fa-3x"></i>
-                    </div>
-                    <h4 class="text-white fw-bold mb-3">Our Mission</h4>
-                    <p class="small text-white-50">To empower every traveler with data-driven, verified itineraries and 24/7 technical support, ensuring every journey through Bharat is safe, seamless, and deeply enriching.</p>
-                </div>
-            </div>
-            
-            <!-- Our Values -->
-            <div class="col-md-4 reveal">
-                <div class="founder-box h-100 p-5 text-center">
-                    <div class="mb-4">
-                        <i class="fas fa-handshake text-orange fa-3x"></i>
-                    </div>
-                    <h4 class="text-white fw-bold mb-3">Our Values</h4>
-                    <p class="small text-white-50">Integrity in information, obsession with user experience, and a deep respect for local communities. We believe in "Atithi Devo Bhava" in every line of our code.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Detailed Website & Founder Story -->
-    <section class="story-container bg-navy-slate">
-        <div class="container">
-            <div class="row mb-5 reveal">
-                <div class="col-lg-12 text-center">
-                    <span class="section-tag">Our Infrastructure</span>
-                    <h2 class="huge-title">Why We Built <span class="text-orange">IndiaTours</span></h2>
-                    <p class="fs-5 text-white-50 mx-auto" style="max-width: 900px;">Addressing the gap between traditional tourism and the digital age.</p>
-                </div>
-            </div>
-
-            <div class="row reveal">
-                <div class="col-lg-12">
-                    <div class="founder-box">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                                <img src="founder.jpg" class="founder-img shadow-lg" alt="Nitin Kumar">
-                                <div class="mt-4">
-                                    <h4 class="text-white fw-bold mb-1">Nitin Kumar</h4>
-                                    <p class="text-orange small fw-bold">Founder & Lead Developer</p>
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <a href="https://github.com/Nitin765kumar" target="_blank" class="social-circle"><i class="fab fa-github"></i></a>
-                                        <a href="https://www.linkedin.com/in/nitinkumar25" target="_blank" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="https://www.youtube.com/@nitinkumar8487" target="_blank" class="social-circle"><i class="fab fa-youtube"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 ps-lg-5">
-                                <h3 class="text-white fw-bold mb-4">A Note From The Architect</h3>
-                                <p class="text-white-50">
-                                    As a <b>BCA student and developer</b>, I looked at the travel industry and saw a major problem: "Information Chaos." Travelers were forced to visit dozens of websites, many of which were outdated or unreliable. I realized that my technical skills could be used to solve this.
-                                </p>
-                                <p class="text-white-50">
-                                    <b>IndiaTours</b> was built to be a "Single Point of Truth." I have integrated clean code with verified travel data to ensure that when you visit this site, you have no doubts. From high-resolution imagery to optimized booking paths, every part of this website is designed to be as reliable as a local guide but as fast as a modern application.
-                                </p>
-                                <p class="text-white-50 mb-0">
-                                    My mission is simple: to make sure that the complexity of travel logistics never stands in the way of the beauty of the Indian experience. We provide <b>verified itineraries, 24/7 technical support, and a transparent booking process</b>. With IndiaTours, you aren't just booking a trip; you are stepping into a system built for your peace of mind.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- Meet Our Team Section -->
-<section class="team-container" style="background: #071224; padding: 100px 0;">
-    <div class="container">
-        <div class="row mb-5 reveal">
-            <div class="col-lg-12 text-center">
-                <span class="section-tag">The Backbone</span>
-                <h2 class="huge-title">Meet Our <span class="text-orange">Core Team</span></h2>
-                <p class="text-white-50">The experts behind the seamless travel experience at IndiaTours.</p>
-            </div>
+    <section class="sec">
+      <div class="wrap">
+        <h2 style="margin-bottom: 8px">How we plan a trip</h2>
+        <p class="mut" style="margin: 0 0 22px">The same six steps for a two-day pilgrimage or a week in the Himalaya.</p>
+        <div class="steps">
+          <div class="step"><b>1</b><h3>We listen</h3><p>You tell us who is travelling, when, and what a good trip means to you: slow mornings, long drives, food, temples or snow.</p></div>
+          <div class="step"><b>2</b><h3>We shortlist</h3><p>We suggest one or two routes from our packages, or adjust a package to fit your dates and pace.</p></div>
+          <div class="step"><b>3</b><h3>We check</h3><p>Hotels, drivers and timings are confirmed before we quote. If a leg is too rushed, we say so and change it.</p></div>
+          <div class="step"><b>4</b><h3>We price it plainly</h3><p>You see the trip fare, GST and what is included or not, in one summary. No surprises at checkout.</p></div>
+          <div class="step"><b>5</b><h3>We brief you</h3><p>Before you leave you get pickup details, a document checklist and local tips for the season.</p></div>
+          <div class="step"><b>6</b><h3>We stay reachable</h3><p>Someone on our team is a call or message away for the whole trip, not only office hours on day one.</p></div>
         </div>
-        
-        <div class="row g-5 justify-content-center">
-            <!-- Member 1: Rishikant -->
-            <div class="col-md-4 reveal">
-                <div class="team-card text-center">
-                    <div class="team-img-wrapper" style="width: 200px; height: 200px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 4px solid var(--navy-light);">
-                        <img src="rishikant.jpeg" class="team-img" style="width: 100%; height: 100%; object-fit: cover;" alt="Rishikant">
-                    </div>
-                    <h4 class="text-white fw-bold">Rishikant</h4>
-                    <p class="text-orange small fw-bold text-uppercase" style="letter-spacing: 2px;">Operations Lead</p>
-                    <p class="small text-white-50 px-3">Expert in managing ground logistics and ensuring traveler safety across all major Indian circuits.</p>
-                </div>
-            </div>
+      </div>
+    </section>
 
-            <!-- Member 2: Anish Bhashkar -->
-            <div class="col-md-4 reveal">
-                <div class="team-card text-center">
-                    <div class="team-img-wrapper" style="width: 200px; height: 200px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 4px solid var(--navy-light);">
-                        <img src="anish.jpg" class="team-img" style="width: 100%; height: 100%; object-fit: cover;" alt="Anish Bhashkar">
-                    </div>
-                    <h4 class="text-white fw-bold">Anish Bhashkar</h4>
-                    <p class="text-orange small fw-bold text-uppercase" style="letter-spacing: 2px;">Head of Research</p>
-                    <p class="small text-white-50 px-3">Specializes in historical verification and discovering hidden heritage sites for our unique itineraries.</p>
-                </div>
-            </div>
-
-            <!-- Member 3: Shailendra -->
-            <div class="col-md-4 reveal">
-                <div class="team-card text-center">
-                    <div class="team-img-wrapper" style="width: 200px; height: 200px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 4px solid var(--navy-light);">
-                        <img src="shailendra.jpeg" class="team-img" style="width: 100%; height: 100%; object-fit: cover;" alt="Shailendra">
-                    </div>
-                    <h4 class="text-white fw-bold">Shailendra</h4>
-                    <p class="text-orange small fw-bold text-uppercase" style="letter-spacing: 2px;">Strategy Director</p>
-                    <p class="small text-white-50 px-3">Leading our growth initiatives and building partnerships with local communities across Bharat.</p>
-                </div>
-            </div>
+    <section class="sec">
+      <div class="wrap">
+        <h2 style="margin-bottom: 22px">What we stand for</h2>
+        <div class="vals">
+          <div class="panel"><h3>Clear prices</h3><p>You see the fare, the GST and the total before you pay. Cancellation terms are written in plain language and linked from every package.</p></div>
+          <div class="panel"><h3>Safety first</h3><p>We avoid rushed mountain drives, brief you on altitude and weather, and keep a contact on call during every trip.</p></div>
+          <div class="panel"><h3>Local first</h3><p>We prefer family-run stays, local guides and neighbourhood food, so the places you visit benefit from your visit.</p></div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-    <!-- --- PROFESSIONAL FOOTER --- -->
-    <footer>
-        <div class="container">
-            <div class="row g-5">
-                <!-- Brand Column -->
-                <div class="col-lg-4 col-md-6">
-                    <h3 class="fw-bold mb-4 text-white">INDIA<span class="text-orange">TOURS</span></h3>
-                    <p class="text-slate mb-4 pe-lg-4">
-                        IndiaTours is a premium travel portal committed to showcasing the authentic beauty of India through professional planning and technical excellence. Built by travelers, for travelers.
-                    </p>
-                    <div class="d-flex">
-                        <a href="https://github.com/Nitin765kumar" target="_blank" class="social-circle"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/nitinkumar25" target="_blank" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@nitinkumar8487" target="_blank" class="social-circle"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6 ms-lg-auto">
-                    <h5 class="footer-heading">Company</h5>
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link">Our Story</a>
-                    <a href="destinations.html" class="footer-link">Explore India</a>
-                    <a href="packages.html" class="footer-link">Tour Packages</a>
-                    <a href="contact.html" class="footer-link">Contact</a>
-                </div>
-
-                <!-- Legal & Support -->
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="footer-heading">Legal & Support</h5>
-                    <a href="privacy.html" class="footer-link"><i class="fas fa-shield-alt me-2 small"></i>Privacy Policy</a>
-                    <a href="terms.html" class="footer-link"><i class="fas fa-file-contract me-2 small"></i>Terms of Use</a>
-                    <a href="#" class="footer-link"><i class="fas fa-question-circle me-2 small"></i>Help Center</a>
-                    <a href="#" class="footer-link"><i class="fas fa-user-shield me-2 small"></i>Safe Booking</a>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="footer-heading">Travel Newsletter</h5>
-                    <p class="small text-slate mb-3">Get the latest travel tips, heritage stories, and exclusive offers.</p>
-                    <div class="input-group mb-3 shadow-sm">
-                        <input type="email" class="form-control bg-navy-light border-0 text-white py-2" placeholder="Email Address" style="font-size: 0.9rem;">
-                        <button class="btn btn-orange px-3"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                    <div class="mt-4">
-                        <img src="https://img.icons8.com/color/48/visa.png" width="30" class="me-2 opacity-75" alt="visa">
-                        <img src="https://img.icons8.com/color/48/mastercard.png" width="30" class="me-2 opacity-75" alt="mastercard">
-                        <img src="https://img.icons8.com/color/48/upi.png" width="30" class="opacity-75" alt="upi">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="my-5" style="border-color: rgba(255,255,255,0.05);">
-
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="small text-slate mb-0">
-                        © 2026 IndiaTours. Developed with <i class="fas fa-heart text-orange mx-1"></i> by <span class="text-white fw-bold">Nitin Kumar</span>.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <p class="small text-slate mb-0" style="font-size: 0.75rem;">
-                        Recognized by <span class="text-white-50">Ministry of Tourism, India</span> | ISO 9001:2026 Certified
-                    </p>
-                </div>
-            </div>
+    <section class="sec">
+      <div class="wrap">
+        <h2 style="margin-bottom: 22px">The people behind your trip</h2>
+        <div class="team">
+          <article class="person">
+            <img src="img/founder.jpg" alt="Nitin Kumar" loading="lazy">
+            <h3>Nitin Kumar</h3>
+            <p><b>Founder and lead developer</b></p>
+            <p>Designs the planning flow and the website, and answers the questions nobody else has time for.</p>
+          </article>
+          <article class="person">
+            <img src="img/rishikant.jpeg" alt="Rishikant" loading="lazy">
+            <h3>Rishikant</h3>
+            <p><b>Operations lead</b></p>
+            <p>Runs ground logistics: drivers, transfers, hotel check-ins and traveller safety on every circuit.</p>
+          </article>
+          <article class="person">
+            <img src="img/anish.jpg" alt="Anish Bhashkar" loading="lazy">
+            <h3>Anish Bhashkar</h3>
+            <p><b>Head of research</b></p>
+            <p>Verifies history and timings, and finds quieter heritage sites that make an itinerary feel unrushed.</p>
+          </article>
+          <article class="person">
+            <img src="img/shailendra.jpeg" alt="Shailendra" loading="lazy">
+            <h3>Shailendra</h3>
+            <p><b>Strategy director</b></p>
+            <p>Builds partnerships with hotels, guides and local communities so more of your spend stays at the destination.</p>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Scroll Reveal logic
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.1 });
+    <section class="sec">
+      <div class="wrap">
+        <h2 style="margin-bottom: 8px">Places on our wish list</h2>
+        <p class="mut" style="margin: 0 0 22px">Not bookable yet, but where we would like to take you next.</p>
+        <div class="gal">
+          <figure>
+            <img src="img/redfort.jpg" alt="Red Fort, Delhi" loading="lazy">
+            <figcaption>Red Fort, Delhi</figcaption>
+          </figure>
+          <figure>
+            <img src="img/goldentemple.jpg" alt="Golden Temple, Amritsar" loading="lazy">
+            <figcaption>Golden Temple, Amritsar</figcaption>
+          </figure>
+          <figure>
+            <img src="img/Meenakshi.jpg" alt="Meenakshi Temple, Madurai" loading="lazy">
+            <figcaption>Meenakshi Temple, Madurai</figcaption>
+          </figure>
+          <figure>
+            <img src="img/hampi.avif" alt="Hampi, Karnataka" loading="lazy">
+            <figcaption>Hampi, Karnataka</figcaption>
+          </figure>
+          <figure>
+            <img src="img/kedarnath.jpg" alt="Kedarnath, Uttarakhand" loading="lazy">
+            <figcaption>Kedarnath, Uttarakhand</figcaption>
+          </figure>
+          <figure>
+            <img src="img/tawang.jpg" alt="Tawang, Arunachal Pradesh" loading="lazy">
+            <figcaption>Tawang, Arunachal Pradesh</figcaption>
+          </figure>
+          <figure>
+            <img src="img/puri.jpg" alt="Puri, Odisha" loading="lazy">
+            <figcaption>Puri, Odisha</figcaption>
+          </figure>
+          <figure>
+            <img src="img/kaziranga.avif" alt="Kaziranga, Assam" loading="lazy">
+            <figcaption>Kaziranga, Assam</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <section class="sec">
+      <div class="wrap">
+        <div class="panel">
+          <h2>Travelling responsibly</h2>
+          <p>India's most loved places are also its most fragile. We ask every traveller to carry a refillable bottle, avoid single-use plastic, dress modestly at temples, ask before photographing people, and keep to marked trails in the mountains. Where we can, we book hotels that manage waste and water carefully.</p>
+          <p>If a place is overcrowded in a given season, we will tell you and suggest a quieter week or a nearby alternative.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Ready to plan something?</h2>
+          <p>Browse the packages, or tell us what you have in mind.</p>
+          <a class="btn btn-ink" href="packages.html">Browse packages</a>
+          <a class="btn btn-line" href="contact.html" style="margin-left: 10px">Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
 </body>
 </html>

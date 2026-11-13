@@ -1,227 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Confirmed | IndiaTours</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    
-    <style>
-        :root {
-            --navy-dark: #050a15;
-            --navy-slate: #112240;
-            --orange: #ff4d00;
-            --success: #00cf8d;
-        }
-
-        body { 
-            background: radial-gradient(circle at top right, #112240, #050a15);
-            color: white; 
-            font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-        }
-
-        /* Screen Styles */
-        .ticket-card {
-            background: var(--navy-slate);
-            border-radius: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-            max-width: 500px;
-            margin: 50px auto;
-        }
-
-        .success-icon {
-            width: 80px; height: 80px;
-            background: rgba(0, 207, 141, 0.1);
-            color: var(--success);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2.5rem; margin: 0 auto 20px;
-            border: 2px solid var(--success);
-        }
-
-        .booking-id {
-            background: rgba(255, 77, 0, 0.1);
-            border: 1px solid var(--orange);
-            color: var(--orange);
-            padding: 5px 20px;
-            border-radius: 50px;
-            font-family: monospace;
-        }
-
-        /* Print-Only Detailed Receipt (Hidden on Screen) */
-        #print-receipt { display: none; }
-
-        @media print {
-            .no-print { display: none !important; }
-            body { background: white !important; color: black !important; }
-            
-            #print-receipt { 
-                display: block !important; 
-                color: black !important;
-                padding: 40px;
-            }
-
-            .receipt-header {
-                display: flex;
-                justify-content: space-between;
-                border-bottom: 2px solid #eee;
-                padding-bottom: 20px;
-                margin-bottom: 30px;
-            }
-
-            .status-badge {
-                color: #00cf8d;
-                font-weight: bold;
-                text-transform: uppercase;
-                border: 2px solid #00cf8d;
-                padding: 5px 15px;
-                transform: rotate(-15deg);
-                display: inline-block;
-            }
-
-            .table { color: black !important; }
-            .ticket-card { display: none; } /* Hide the fancy card on print */
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking confirmed | NK Journeys</title>
+  <meta name="description" content="Your booking voucher.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/nkj.css">
 </head>
+<body data-page="confirmation" data-nav="packages.html">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="site-header"></div>
 
-<body>
+  <main id="main">
+    <div id="app"></div>
+  </main>
 
-    <div class="container">
-        <div class="ticket-card p-5 text-center no-print">
-            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
-            <h2 class="fw-bold">Awesome!</h2>
-            <p class="text-white-50">Your trip is officially booked.</p>
-            <div class="booking-id mb-4" id="displayRef">REF: IT-XXXXXX</div>
-            
-            <div class="text-start border-top border-white border-opacity-10 pt-4">
-                <div class="mb-3">
-                    <small class="text-white-50 text-uppercase">Destination</small>
-                    <p class="mb-0 fw-bold" id="screenPkg">--</p>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <div>
-                        <small class="text-white-50 text-uppercase">Total Paid</small>
-                        <p class="mb-0 fw-bold text-success" id="screenAmount">₹0</p>
-                    </div>
-                    <button onclick="window.print()" class="btn btn-outline-light btn-sm rounded-pill">
-                        <i class="fas fa-print me-1"></i> Print Full Details
-                    </button>
-                </div>
-            </div>
+  <div id="site-footer"></div>
 
-            <div class="mt-5 d-grid gap-2">
-                <a href="index.html" class="btn btn-primary bg-primary border-0 py-3 rounded-pill fw-bold">Back to Home</a>
-            </div>
-        </div>
-
-        <div id="print-receipt">
-            <div class="receipt-header">
-                <div>
-                    <h1 style="color: #ff4d00; margin-bottom: 5px;">IndiaTours</h1>
-                    <p class="text-muted small">123 Travel Lane, New Delhi, India<br>support@indiantours.com</p>
-                </div>
-                <div class="text-end">
-                    <div class="status-badge">Payment Received</div>
-                    <p class="mt-2 mb-0"><strong>Receipt #:</strong> <span id="printRef"></span></p>
-                    <p class="mb-0"><strong>Date:</strong> <span id="printDate"></span></p>
-                </div>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-6">
-                    <h6 class="text-muted text-uppercase small">Billed To:</h6>
-                    <p><strong>Nitin Kumar</strong><br>BCA Student | Developer<br>India</p>
-                </div>
-                <div class="col-6 text-end">
-                    <h6 class="text-muted text-uppercase small">Payment Method:</h6>
-                    <p>Secure UPI / Credit Card<br>Transaction ID: <span id="transID"></span></p>
-                </div>
-            </div>
-
-            <table class="table table-bordered">
-                <thead class="table-light">
-                    <tr>
-                        <th>Description</th>
-                        <th class="text-center">Qty</th>
-                        <th class="text-end">Price</th>
-                        <th class="text-end">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <strong id="itemTitle">Holiday Package</strong><br>
-                            <small class="text-muted">Includes accommodation, sightseeing, and breakfast.</small>
-                        </td>
-                        <td class="text-center">1</td>
-                        <td class="text-end" id="itemPrice">₹0</td>
-                        <td class="text-end" id="itemTotal">₹0</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3" class="text-end border-0">Subtotal</td>
-                        <td class="text-end border-0" id="subTotal">₹0</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="text-end border-0">GST (5%)</td>
-                        <td class="text-end border-0" id="taxTotal">₹0</td>
-                    </tr>
-                    <tr style="font-size: 1.2rem; font-weight: bold;">
-                        <td colspan="3" class="text-end border-0">Grand Total</td>
-                        <td class="text-end border-0" style="color: #ff4d00;" id="grandTotal">₹0</td>
-                    </tr>
-                </tfoot>
-            </table>
-
-            <div class="mt-5 p-3" style="background: #f9f9f9; border-radius: 10px;">
-                <h6>Important Instructions:</h6>
-                <ul class="small text-muted">
-                    <li>Please carry a valid ID proof (Aadhar/Passport) during travel.</li>
-                    <li>Reporting time is 2 hours prior to departure.</li>
-                    <li>This is a computer-generated receipt and does not require a signature.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Confetti effect
-        confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
-
-        // Data Management
-        const params = new URLSearchParams(window.location.search);
-        const amount = parseInt(params.get('amount') || 0);
-        const pkg = params.get('pkg') || "Standard Package";
-        const ref = params.get('ref') || "IT-" + Math.floor(100000 + Math.random() * 900000);
-        
-        // Calculate break-up for the PDF
-        const tax = Math.round(amount * 0.0476); // Reverse calculate 5% GST
-        const base = amount - tax;
-
-        // Populate Screen Card
-        document.getElementById('displayRef').innerText = "REF: " + ref;
-        document.getElementById('screenPkg').innerText = pkg;
-        document.getElementById('screenAmount').innerText = "₹" + amount.toLocaleString('en-IN');
-
-        // Populate PDF Receipt
-        document.getElementById('printRef').innerText = ref;
-        document.getElementById('printDate').innerText = new Date().toLocaleDateString('en-IN');
-        document.getElementById('transID').innerText = "TXN" + Math.random().toString(36).substr(2, 9).toUpperCase();
-        document.getElementById('itemTitle').innerText = pkg;
-        document.getElementById('itemPrice').innerText = "₹" + base.toLocaleString('en-IN');
-        document.getElementById('itemTotal').innerText = "₹" + base.toLocaleString('en-IN');
-        document.getElementById('subTotal').innerText = "₹" + base.toLocaleString('en-IN');
-        document.getElementById('taxTotal').innerText = "₹" + tax.toLocaleString('en-IN');
-        document.getElementById('grandTotal').innerText = "₹" + amount.toLocaleString('en-IN');
-    </script>
-
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
 </body>
 </html>

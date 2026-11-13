@@ -1,526 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IndiaTours | Premium Travel Experiences</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NK Journeys | Trips across India</title>
+  <meta name="description" content="Hand-planned trips across India with clear prices and one trip manager.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/nkj.css">
 </head>
-<body>
+<body data-page="home" data-nav="index.html">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="site-header"></div>
 
-    <nav class="navbar navbar-expand-lg fixed-top site-navbar">
-        <div class="container">
-            <a class="navbar-brand site-brand" href="index.html">
-                <span class="brand-main">INDIA</span><span class="brand-accent">TOURS</span>
-            </a>
-
-            <button class="navbar-toggler site-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navContent">
-                <ul class="navbar-nav ms-auto align-items-lg-center site-nav-list">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-brand rounded-pill px-4" href="booking.html">Book Your Trip</a>
-                    </li>
-                </ul>
-            </div>
+  <main id="main">
+    <header class="hero">
+      <div class="wrap hero-in">
+        <div>
+          <h1>Every journey has a story. Let's write yours.</h1>
+          <p>Hand-planned trips across India with checked stays, local guides and one person you can reach from booking to drop.</p>
+          <div class="acts">
+            <a class="btn btn-gold" href="packages.html">Explore packages</a>
+            <a class="btn btn-line" href="contact.html">Build a custom trip</a>
+          </div>
         </div>
-    </nav>
-
-    <header class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container position-relative">
-            <div class="row align-items-center min-vh-100 hero-content">
-                <div class="col-lg-7" data-reveal>
-                    <div class="hero-copy">
-                        <span class="section-kicker">Authentic Indian Journeys</span>
-                        <h1 class="hero-title">Travel across India with stories, comfort, and unforgettable views.</h1>
-                        <p class="hero-text">
-                            From Himalayan escapes and royal heritage cities to coastal retreats and spiritual experiences,
-                            IndiaTours designs journeys that feel effortless, beautiful, and deeply memorable.
-                        </p>
-
-                        <div class="hero-actions">
-                            <a href="destinations.html" class="btn btn-brand btn-lg rounded-pill px-4">Start Exploring</a>
-                            <a href="packages.html" class="btn btn-outline-light btn-lg rounded-pill px-4">View Packages</a>
-                        </div>
-
-                        <div class="hero-trust">
-                            <div class="trust-item">
-                                <strong>2500+</strong>
-                                <span>Happy Travelers</span>
-                            </div>
-                            <div class="trust-item">
-                                <strong>120+</strong>
-                                <span>Handpicked Tours</span>
-                            </div>
-                            <div class="trust-item">
-                                <strong>4.9/5</strong>
-                                <span>Guest Rating</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-5" data-reveal>
-                    <div class="hero-spotlight-card">
-                        <div class="spotlight-badge">
-                            <i class="fa-solid fa-star"></i>
-                            Trending Journey
-                        </div>
-
-                        <div class="spotlight-image">
-                            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80" alt="Taj Mahal, Agra">
-                        </div>
-
-                        <div class="spotlight-body">
-                            <div class="spotlight-top">
-                                <div>
-                                    <p class="spotlight-label">Golden Triangle Escape</p>
-                                    <h3>Delhi, Agra & Jaipur</h3>
-                                </div>
-                                <span class="spotlight-price">From Rs 24,999</span>
-                            </div>
-
-                            <p class="spotlight-text">A premium introduction to India with royal palaces, iconic monuments, local food trails, and guided cultural experiences.</p>
-
-                            <div class="spotlight-meta">
-                                <span><i class="fa-regular fa-clock"></i> 6 Days</span>
-                                <span><i class="fa-solid fa-user-group"></i> Small Group</span>
-                                <span><i class="fa-solid fa-location-dot"></i> Bestseller</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-img">
+          <img src="img/taj.jpg" alt="Taj Mahal at sunrise" onerror="this.remove()">
         </div>
+      </div>
     </header>
 
-    <section class="trip-search-wrap">
-        <div class="container">
-            <div class="trip-search-card" data-reveal>
-                <div class="trip-search-head">
-                    <div>
-                        <span class="section-kicker">Plan Your Next Journey</span>
-                        <h2>Search destinations, themes, and the best season to travel</h2>
-                    </div>
-                </div>
-
-                <div class="row g-3 align-items-end">
-                    <div class="col-lg-4">
-                        <label for="searchDest" class="form-label search-label">Destination</label>
-                        <input type="text" id="searchDest" class="form-control search-control" placeholder="e.g. Kerala, Goa, Jaipur">
-                    </div>
-                    <div class="col-lg-3">
-                        <label for="searchPackage" class="form-label search-label">Package Type</label>
-                        <select id="searchPackage" class="form-select search-control">
-                            <option value="all">All Packages</option>
-                            <option value="luxury">Luxury Wellness</option>
-                            <option value="adventure">Adventure Trek</option>
-                            <option value="heritage">Heritage Tour</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-3">
-                        <label for="searchDate" class="form-label search-label">Travel Month</label>
-                        <input type="month" id="searchDate" class="form-control search-control">
-                    </div>
-                    <div class="col-lg-2">
-                        <button id="searchBtn" class="btn btn-brand search-btn w-100">Search</button>
-                    </div>
-                </div>
-            </div>
+    <div class="wrap">
+      <form class="search" id="hs" role="search">
+        <div>
+          <label for="hq">Where to?</label>
+          <input id="hq" placeholder="Kerala, Ladakh, Jaipur">
         </div>
-    </section>
-
-    <section class="partners-strip">
-        <div class="container">
-            <div class="partners-inner" data-reveal>
-                <span>Trusted by travelers for heritage stays, curated tours, and destination support across India.</span>
-                <div class="partners-list">
-                    <span>Luxury Stays</span>
-                    <span>Local Guides</span>
-                    <span>Custom Itineraries</span>
-                    <span>24/7 Assistance</span>
-                </div>
-            </div>
+        <div>
+          <label for="hc">Trip style</label>
+          <select id="hc">
+            <option value="all">Any style</option>
+            <option value="mountains">Mountains</option>
+            <option value="beaches">Beaches</option>
+            <option value="heritage">Heritage</option>
+            <option value="spiritual">Spiritual</option>
+            <option value="honeymoon">Honeymoon</option>
+            <option value="family">Family</option>
+          </select>
         </div>
-    </section>
-
-    <section class="about-experience section-space" id="explore">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6" data-reveal>
-                    <div class="experience-gallery">
-                        <div class="gallery-main">
-                            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80" alt="Taj Mahal view">
-                        </div>
-                        <div class="row g-3 gallery-grid">
-                            <div class="col-6">
-                                <div class="gallery-thumb">
-                                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="Indian palace architecture">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="gallery-thumb">
-                                    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80" alt="Indian cultural destination">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6" data-reveal>
-                    <span class="section-kicker">Why This Experience Feels Different</span>
-                    <h2 class="section-title">A modern gateway to India's culture, landscapes, and unforgettable moments.</h2>
-                    <p class="section-text">
-                        IndiaTours is built for travelers who want more than bookings. We create journeys that feel smooth from
-                        the first click to the final destination, with carefully selected stays, curated routes, and memorable local experiences.
-                    </p>
-                    <p class="section-text">
-                        Whether you want peaceful backwaters, royal heritage, mountain adventure, or vibrant city discovery,
-                        every itinerary is shaped to balance comfort, authenticity, and visual beauty.
-                    </p>
-
-                    <div class="experience-points">
-                        <article class="experience-point">
-                            <div class="experience-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-                            <div>
-                                <h3>Curated Destinations</h3>
-                                <p>From Kerala and Kashmir to Varanasi, Ladakh, Goa, and Jaipur, each destination is selected for rich experiences and strong traveler appeal.</p>
-                            </div>
-                        </article>
-
-                        <article class="experience-point">
-                            <div class="experience-icon"><i class="fa-solid fa-route"></i></div>
-                            <div>
-                                <h3>Seamless Planning</h3>
-                                <p>Packages, destination discovery, pricing, and travel flow are designed to feel simple, premium, and easy to trust.</p>
-                            </div>
-                        </article>
-
-                        <article class="experience-point">
-                            <div class="experience-icon"><i class="fa-solid fa-gem"></i></div>
-                            <div>
-                                <h3>Premium Detail</h3>
-                                <p>We focus on the little things that shape a beautiful trip, from styling and support to meaningful experiences that travelers remember.</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <a href="about.html" class="btn btn-outline-brand rounded-pill px-4">Learn More About Us <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="featured-destinations section-space">
-        <div class="container">
-            <div class="section-heading text-center" data-reveal>
-                <span class="section-kicker">Top Destinations</span>
-                <h2 class="section-title">Discover India through curated escapes</h2>
-                <p class="section-subtitle">A refined mix of mountains, beaches, royal cities, and spiritual landmarks for every kind of traveler.</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-6 col-xl-3" data-reveal>
-                    <article class="destination-card">
-                        <div class="destination-image">
-                            <img src="kerala.jpg" alt="Kerala backwaters">
-                        </div>
-                        <div class="destination-body">
-                            <div class="destination-meta">
-                                <span>Relaxation</span>
-                                <span>Popular</span>
-                            </div>
-                            <h3>Kerala</h3>
-                            <p>Backwater cruises, Ayurvedic wellness, lush greenery, and serene coastal charm.</p>
-                            <a href="destinations.html" class="destination-link">Explore More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-md-6 col-xl-3" data-reveal>
-                    <article class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80" alt="Jaipur heritage architecture">
-                        </div>
-                        <div class="destination-body">
-                            <div class="destination-meta">
-                                <span>Heritage</span>
-                                <span>Royal</span>
-                            </div>
-                            <h3>Jaipur</h3>
-                            <p>Pink City palaces, artisan markets, royal history, and rich cultural textures.</p>
-                            <a href="destinations.html" class="destination-link">Explore More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-md-6 col-xl-3" data-reveal>
-                    <article class="destination-card">
-                        <div class="destination-image">
-                            <img src="ladakh.avif" alt="Ladakh mountain road">
-                        </div>
-                        <div class="destination-body">
-                            <div class="destination-meta">
-                                <span>Adventure</span>
-                                <span>Scenic</span>
-                            </div>
-                            <h3>Ladakh</h3>
-                            <p>Epic roads, dramatic peaks, monasteries, and high-altitude adventure for bold travelers.</p>
-                            <a href="destinations.html" class="destination-link">Explore More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-md-6 col-xl-3" data-reveal>
-                    <article class="destination-card">
-                        <div class="destination-image">
-                            <img src="goa.avif" alt="Goa beach sunset">
-                        </div>
-                        <div class="destination-body">
-                            <div class="destination-meta">
-                                <span>Beach</span>
-                                <span>Leisure</span>
-                            </div>
-                            <h3>Goa</h3>
-                            <p>Sunset beaches, boutique stays, nightlife, and laid-back coastal energy.</p>
-                            <a href="destinations.html" class="destination-link">Explore More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-choose section-space">
-        <div class="container">
-            <div class="section-heading text-center" data-reveal>
-                <span class="section-kicker">Why IndiaTours</span>
-                <h2 class="section-title">Crafted for the modern traveler</h2>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4" data-reveal>
-                    <article class="feature-card">
-                        <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                        <h3>Safe & Secure</h3>
-                        <p>Verified stays, trusted transport partners, and reliable support that helps travelers feel comfortable from start to finish.</p>
-                    </article>
-                </div>
-
-                <div class="col-md-4" data-reveal>
-                    <article class="feature-card">
-                        <div class="icon-box"><i class="fa-solid fa-compass-drafting"></i></div>
-                        <h3>Expert Curation</h3>
-                        <p>Every route is thoughtfully designed to balance iconic places with authentic experiences and strong visual appeal.</p>
-                    </article>
-                </div>
-
-                <div class="col-md-4" data-reveal>
-                    <article class="feature-card">
-                        <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
-                        <h3>Seamless Planning</h3>
-                        <p>From first discovery to booking support, the entire website experience is designed to feel smooth, premium, and easy to use.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonial-section section-space">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-5" data-reveal>
-                    <span class="section-kicker">Traveler Voices</span>
-                    <h2 class="section-title">Memories that stay long after the trip ends</h2>
-                    <p class="section-text">
-                        Beautiful design matters, but trust matters more. These experiences reflect the kind of journeys IndiaTours is built to deliver.
-                    </p>
-                    <a href="packages.html" class="btn btn-brand rounded-pill px-4">View Popular Packages</a>
-                </div>
-
-                <div class="col-lg-7" data-reveal>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <article class="testimonial-card">
-                                <div class="testimonial-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>"Everything felt polished and easy. Our Jaipur and Agra tour was smooth, premium, and memorable from the moment we booked."</p>
-                                <h3>Riya Sharma</h3>
-                                <span>Delhi</span>
-                            </article>
-                        </div>
-
-                        <div class="col-md-6">
-                            <article class="testimonial-card">
-                                <div class="testimonial-stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>"The Kerala package felt calm, classy, and well planned. The website itself gave us confidence before the journey even began."</p>
-                                <h3>Aman Verma</h3>
-                                <span>Mumbai</span>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-card text-center" data-reveal>
-                <span class="section-kicker">Start Your Journey</span>
-                <h2>Let your next India trip feel extraordinary from the very first click.</h2>
-                <p>Explore destinations, compare packages, and choose a travel experience designed to impress.</p>
-                <div class="cta-actions">
-                    <a href="booking.html" class="btn btn-brand btn-lg rounded-pill px-4">Book Now</a>
-                    <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-4">Talk to Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <a class="footer-brand" href="index.html">
-                        <span class="brand-main">INDIA</span><span class="brand-accent">TOURS</span>
-                    </a>
-                    <p class="footer-text">
-                        Crafting unforgettable journeys through the heart of India with premium design, thoughtful planning, and memorable travel experiences.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://github.com/Nitin765kumar" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/nitinkumar25" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:nitinkumar812719@gmail.com" class="social-circle" aria-label="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 offset-lg-1">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="packages.html">Packages</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2">
-                    <h3 class="footer-title">Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
-                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Use</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3">
-                    <h3 class="footer-title">Newsletter</h3>
-                    <p class="footer-text">Get destination ideas, travel inspiration, and special package updates.</p>
-                    <form class="newsletter-form" id="newsletterForm">
-                        <input type="email" id="newsletterEmail" class="form-control newsletter-input" placeholder="Enter your email">
-                        <button type="button" id="newsletterBtn" class="btn btn-brand newsletter-btn">
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="bottom-bar">
-            <div class="container text-center">
-                <p class="mb-0">&copy; 2026 IndiaTours. Developed by <span>Nitin Kumar</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content site-modal">
-            <div class="modal-header">
-                <h5 class="modal-title">Privacy <span class="brand-accent">Policy</span></h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>Last Updated: April 2026</strong></p>
-                <p>At IndiaTours, we are committed to protecting your personal information and handling it responsibly. This Privacy Policy explains what information we collect, how we use it, and the choices you have when using our website and travel services.</p>
-                <p>When you make an inquiry, request a quotation, subscribe to updates, or book a tour with us, we may collect details such as your name, phone number, email address, travel preferences, booking requirements, and payment-related information. Where required for travel arrangements, we may also collect identification details provided by you for reservations, permits, or hotel check-in formalities.</p>
-                <p>We use this information to respond to your inquiries, confirm bookings, coordinate travel services with hotels, transport partners, and local operators, improve customer support, send important travel updates, and enhance the overall experience on our website. We do not sell your personal data to third parties.</p>
-                <ul>
-                    <li>Your information is shared only with trusted service partners when necessary to deliver your travel arrangements.</li>
-                    <li>We use reasonable security measures to protect booking, contact, and payment-related data.</li>
-                    <li>Cookies and analytics tools may be used to improve website performance, usability, and marketing effectiveness.</li>
-                    <li>You may contact us at any time to update, correct, or request deletion of your personal information, subject to applicable legal or booking obligations.</li>
-                </ul>
-                <p>By using our website, you agree to the collection and use of information in accordance with this policy. If you have any questions regarding privacy or data handling, please contact IndiaTours through our official support channels.</p>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-brand rounded-pill px-4" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
+        <button class="btn btn-ink" style="height: 48px">Search trips</button>
+      </form>
     </div>
-</div>
 
-<div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content site-modal">
-            <div class="modal-header">
-                <h5 class="modal-title">Terms &amp; <span class="brand-accent">Conditions</span></h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>These Terms &amp; Conditions govern your use of the IndiaTours website and any travel services, packages, bookings, or inquiries made through our platform. By accessing this website or confirming a booking, you agree to comply with the terms set out below.</p>
-                <ol>
-                    <li>All itineraries, package inclusions, hotel availability, transport arrangements, and pricing are subject to confirmation at the time of booking and may change based on season, supplier availability, and destination regulations.</li>
-                    <li>A booking will be considered confirmed only after receipt of the required advance payment or full payment, as applicable to the selected travel package.</li>
-                    <li>Travelers are responsible for providing accurate personal information, valid identification, and any required travel documents needed for hotel stays, permits, flights, or other services.</li>
-                    <li>Cancellation, amendment, and refund requests are subject to the policy applicable to the specific package, hotel, transport provider, or travel season. Processing charges may apply where relevant.</li>
-                    <li>IndiaTours reserves the right to modify itineraries, accommodations, transport schedules, or sightseeing activities due to weather conditions, operational reasons, safety concerns, force majeure events, or instructions from local authorities.</li>
-                    <li>IndiaTours acts as a tour planner and service coordinator. While we work only with trusted partners, we are not liable for delays, losses, injuries, or disruptions caused by third-party providers, natural events, government actions, or circumstances beyond reasonable control.</li>
-                    <li>Guests are expected to maintain respectful conduct during the tour. We reserve the right to refuse or cancel services without refund in cases of unlawful, abusive, or unsafe behavior.</li>
-                </ol>
-                <p>We recommend that travelers review package details carefully before confirming a booking and arrange suitable travel insurance wherever necessary. Continued use of this website or our services constitutes acceptance of these Terms &amp; Conditions.</p>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-brand rounded-pill px-4" data-bs-dismiss="modal">I Accept</button>
-            </div>
+    <section class="sec">
+      <div class="wrap">
+        <div class="head">
+          <h2>Popular packages</h2>
+          <a href="packages.html"><u>See all packages</u></a>
         </div>
-    </div>
-</div>
+        <div class="grid" id="feat"></div>
+      </div>
+    </section>
 
+    <section class="sec">
+      <div class="wrap">
+        <div class="head">
+          <h2>Where do you want to go?</h2>
+          <a href="destinations.html"><u>All destinations</u></a>
+        </div>
+        <div class="grid" id="dests"></div>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <section class="sec">
+      <div class="wrap">
+        <h2 style="margin-bottom: 26px">Booked in three steps</h2>
+        <div class="steps">
+          <div class="step"><b>1</b><h3>Pick or customise</h3><p>Choose a ready package, or tell us your dates, budget and mood.</p></div>
+          <div class="step"><b>2</b><h3>Pay in full or 30%</h3><p>Secure your dates by UPI, card, net banking or wallet. Prices show GST upfront.</p></div>
+          <div class="step"><b>3</b><h3>Travel with support</h3><p>Get your voucher, pickup details and a number to call during the trip.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Not sure where to go? Tell us your mood.</h2>
+          <p>Share your dates and budget and we will suggest a plan.</p>
+          <a class="btn btn-ink" href="contact.html">Ask for a custom plan</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
 </body>
 </html>

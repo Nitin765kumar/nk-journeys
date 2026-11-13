@@ -1,294 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Our Travel Experts | IndiaTours</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --navy-deep: #050c16;
-            --navy-soft: #0a192f;
-            --orange-vibrant: #ff6b35;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border-glass: rgba(255, 255, 255, 0.1);
-        }
-
-        body { 
-            background-color: var(--navy-deep); 
-            color: #e6f1ff; 
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Premium Navbar */
-        .navbar {
-            background: rgba(5, 12, 22, 0.8) !important;
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid var(--border-glass);
-            padding: 15px 0;
-        }
-
-        /* Hero Split Section */
-        .contact-hero {
-            padding: 160px 0 100px;
-            background: radial-gradient(circle at top right, rgba(255, 107, 53, 0.05), transparent);
-        }
-
-        /* Modern Card Design */
-        .glass-card {
-            background: var(--glass);
-            border: 1px solid var(--border-glass);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 40px;
-            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-card:hover {
-            border-color: var(--orange-vibrant);
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
-        }
-
-        /* Input Styling */
-        .form-floating > .form-control {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-glass);
-            color: white;
-            border-radius: 12px;
-        }
-
-        .form-floating > .form-control:focus {
-            border-color: var(--orange-vibrant);
-            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
-        }
-
-        .btn-premium {
-            background: var(--orange-vibrant);
-            color: white;
-            font-weight: 700;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-            border: none;
-        }
-
-        .btn-premium:hover {
-            background: #e55a2b;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* Map UI */
-        .map-wrapper {
-            border-radius: 30px;
-            overflow: hidden;
-            border: 1px solid var(--border-glass);
-            filter: grayscale(1) invert(0.9) contrast(1.2);
-            height: 450px;
-        }
-
-        /* Profile Icons */
-        .profile-link {
-            width: 45px; height: 45px;
-            background: var(--glass);
-            border: 1px solid var(--border-glass);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center; justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .profile-link:hover {
-            background: var(--orange-vibrant);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        /* Footer Utilities */
-        .footer-legal-link {
-            color: #8892b0;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: 0.2s;
-        }
-        .footer-legal-link:hover { color: var(--orange-vibrant); }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact us | NK Journeys</title>
+  <meta name="description" content="Ask a question or request a custom trip plan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/nkj.css">
 </head>
+<body data-page="contact" data-nav="contact.html">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="site-header"></div>
 
-<body>
+  <main id="main">
+    <div class="wrap">
+      <div class="page-h">
+        <h1 style="font-size: clamp(32px, 4vw, 48px)">Contact us</h1>
+        <p>Ask a question, or tell us what you have in mind and we will suggest a plan.</p>
+      </div>
+      <div class="contact-g">
+        <form class="panel" id="cf" novalidate>
+          <h2>Send an enquiry</h2>
+          <div class="row">
+            <div class="f"><label for="cn">Your name</label><input id="cn" autocomplete="name"></div>
+            <div class="f"><label for="cm">Email</label><input id="cm" type="email" autocomplete="email"></div>
+          </div>
+          <div class="row">
+            <div class="f"><label for="cp">Mobile (optional)</label><input id="cp" inputmode="numeric" maxlength="10" autocomplete="tel"></div>
+            <div class="f"><label for="cw">When do you want to travel?</label><input id="cw" placeholder="For example, March 2027"></div>
+          </div>
+          <div class="f"><label for="ci">Trip you are interested in</label><select id="ci"></select></div>
+          <div class="f"><label for="cg">Message</label><textarea id="cg" placeholder="Who is travelling, how many days, and what you would like to see"></textarea></div>
+          <div id="ce" class="err" role="alert" hidden></div>
+          <button class="btn btn-gold">Send enquiry</button>
+          <div id="cr" aria-live="polite"></div>
+        </form>
+        <aside>
+          <section class="panel">
+            <h3>Reach us</h3>
+            <p><b>Phone</b><br>+91 00000 00000 (sample number)</p>
+            <p><b>Email</b><br>hello@nkjourneys.example</p>
+            <p><b>Hours</b><br>Monday to Saturday, 10:00 to 18:00 IST</p>
+            <p><b>Office</b><br>[Office address goes here]</p>
+          </section>
+          <section class="panel">
+            <h3>Quick answers</h3>
+            <p>Many questions are answered in our <a href="support.html#faq"><u>FAQs</u></a> and the <a href="cancellation.html"><u>cancellation policy</u></a>.</p>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-3" href="index.html">INDIA<span style="color: var(--orange-vibrant);">TOURS</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-                    <li class="nav-item"><a class="nav-link active text-orange" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="btn btn-premium btn-sm ms-lg-3" href="booking.html" style="padding: 10px 20px;">Book Now</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <div id="site-footer"></div>
 
-    <section class="contact-hero">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h6 class="text-uppercase fw-bold mb-3" style="color: var(--orange-vibrant); letter-spacing: 5px;">Contact Support</h6>
-                    <h1 class="display-3 fw-bold mb-4" style="font-family: 'Playfair Display';">Let's Design Your <br><span style="color: var(--orange-vibrant);">Perfect Escape.</span></h1>
-                    <p class="lead text-white-50 mb-5">Have a specific budget? Or looking for a hidden gem in India? Our travel specialists are ready to curate your journey.</p>
-                    
-                    <div class="d-flex flex-column gap-4">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="profile-link" style="border-radius: 12px;"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <p class="mb-0 fw-bold">Call us directly</p>
-                                <p class="text-white-50 small mb-0">+91 98765 43210</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="profile-link" style="border-radius: 12px;"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <p class="mb-0 fw-bold">Email Support</p>
-                                <p class="text-white-50 small mb-0">support@indiatours.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="glass-card">
-                        <h3 class="fw-bold mb-4">Send a Message</h3>
-                        <form id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Name" required>
-                                        <label for="name">Full Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                        <label for="email">Email Address</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="type">
-                                            <option>Leisure Travel</option>
-                                            <option>Business Trip</option>
-                                            <option>Honeymoon Package</option>
-                                            <option>Group Tour (INR Special)</option>
-                                        </select>
-                                        <label for="type">Inquiry Type</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" id="message" style="height: 120px" placeholder="Message"></textarea>
-                                        <label for="message">Tell us about your plans...</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-premium w-100 py-3" type="submit">Send Inquiry</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-8">
-                    <div class="map-wrapper">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113912.44122177422!2d82.12219765451663!3d26.76785237330752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a07937e6da543%3A0xc3f5872895e63821!2sAyodhya%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen=""></iframe>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ps-lg-4">
-                        <h2 class="fw-bold mb-4">Visit Our <br>Creative Studio</h2>
-                        <p class="text-white-50 mb-4">Based in the heart of Ayodhya, we blend local insights with global travel standards.</p>
-                        <h5 class="fw-bold mb-2">Ayodhya, India</h5>
-                        <p class="text-white-50 small mb-4">Naya Ghat, Ayodhya<br>Uttar Pradesh, 224123</p>
-                        
-                        <div class="pt-4 border-top border-secondary">
-                            <h6 class="fw-bold mb-3">Connect With Nitin</h6>
-                            <div class="d-flex gap-3">
-                                <a href="https://github.com/Nitin765kumar" target="_blank" class="profile-link"><i class="fa-brands fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/nitinkumar25" target="_blank" class="profile-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="pt-5 mt-5 border-top border-secondary">
-        <div class="container">
-            <div class="row g-5 py-5">
-                <div class="col-lg-4">
-                    <h4 class="fw-bold mb-4">INDIA<span style="color: var(--orange-vibrant);">TOURS</span></h4>
-                    <p class="text-white-50">Providing authentic Indian travel experiences since 2025. Your journey, our passion.</p>
-                </div>
-                <div class="col-lg-4">
-                    <h6 class="fw-bold mb-4">Trust & Safety</h6>
-                    <div class="d-flex flex-column gap-2">
-                        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
-                        <a href="terms.html" class="footer-legal-link">Terms & Conditions</a>
-                        <a href="#" class="footer-legal-link">Cancellation Policy</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <h6 class="fw-bold mb-4">Get Special Offers</h6>
-                    <div class="input-group mb-3">
-                        <input type="email" id="newsEmail" class="form-control bg-transparent text-white border-secondary" placeholder="Email Address">
-                        <button class="btn btn-premium" id="newsBtn" style="padding: 10px 20px;">Join</button>
-                    </div>
-                    <div id="newsStatus" class="small"></div>
-                </div>
-            </div>
-            <div class="text-center py-4 border-top border-secondary">
-                <p class="small text-white-50 mb-0">© 2026 IndiaTours. Developed by <span class="text-white fw-bold">Nitin Kumar</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Form Logic
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Your inquiry has been sent to our travel concierge!');
-            this.reset();
-        });
-
-        // Newsletter Logic
-        document.getElementById('newsBtn').addEventListener('click', function() {
-            const status = document.getElementById('newsStatus');
-            status.innerHTML = '<span class="text-success">Success! Check your inbox for INR travel deals.</span>';
-            document.getElementById('newsEmail').value = '';
-        });
-    </script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
 </body>
 </html>
