@@ -89,15 +89,13 @@ img {
   height: 70px;
 }
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font: 700 24px Fraunces,serif;
 }
-.logo i {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--gold);
-  margin-left: 3px;
+.logo svg {
+  flex: none;
 }
 .nav-links {
   display: flex;

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <title>NK Journeys</title>
+  <circle cx="40" cy="40" r="38" fill="#FBF5EA"/>
+  <path d="M26 66 C26 50 54 54 52 38 S62 22 56 14" fill="none" stroke="#14213D" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="56" cy="14" r="5" fill="#F2A33A"/>
+</svg>
